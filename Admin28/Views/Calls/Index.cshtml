@@ -1,140 +1,31 @@
 ﻿@model IEnumerable<Admin28.Models.JC_HC_CURENT>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Current Call List";
 }
 
-<h2>Index</h2>
+<h2>Current Call List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<table class="table table-bordered table-condensed table-striped" id="paged">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TYCOD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SUB_TYCOD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UDTS)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.XDTS)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ESTNUM)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EDIRPRE)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EFEANME)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EFEATYP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UNIT_COUNT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LOI_SENT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HC_SENT)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AG_ID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LOI_EVAL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UNIT_EVAL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TYPE_EVAL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.XSTREET1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.XSTREET2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ESZ)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.COMMENTS)
-        </th>
+        <th>@Html.DisplayNameFor(model => model.EID)</th>
+        <th>@Html.DisplayNameFor(model => model.NUM_1)</th>
+        <th>@Html.DisplayNameFor(model => model.AG_ID)</th>
+        <th>@Html.DisplayNameFor(model => model.TYCOD)</th>
+        <th>@Html.DisplayNameFor(model => model.SUB_TYCOD)</th>
+        <th>@Html.DisplayNameFor(model => model.UNIT_COUNT)</th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TYCOD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SUB_TYCOD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UDTS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.XDTS)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ESTNUM)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EDIRPRE)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EFEANME)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EFEATYP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UNIT_COUNT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LOI_SENT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HC_SENT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AG_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LOI_EVAL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UNIT_EVAL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TYPE_EVAL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.XSTREET1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.XSTREET2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ESZ)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.COMMENTS)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
+        <td>@Html.DisplayFor(modelItem => item.EID)</td>
+        <td>@Html.DisplayFor(modelItem => item.NUM_1)</td>
+        <td>@Html.DisplayFor(modelItem => item.AG_ID)</td>
+        <td>@Html.DisplayFor(modelItem => item.TYCOD)</td>
+        <td>@Html.DisplayFor(modelItem => item.SUB_TYCOD)</td>
+        <td>@Html.DisplayFor(modelItem => item.UNIT_COUNT)</td>
+        <td>@Html.ActionLink("Details", "Details", new { eid = item.EID })</td>
     </tr>
 }
 

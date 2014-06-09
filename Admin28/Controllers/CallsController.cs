@@ -46,31 +46,31 @@ namespace Admin28.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EID,TYCOD,SUB_TYCOD,UDTS,XDTS,ESTNUM,EDIRPRE,EFEANME,EFEATYP,UNIT_COUNT,LOI_SENT,HC_SENT,AG_ID,LOI_EVAL,UNIT_EVAL,TYPE_EVAL,NUM_1,XSTREET1,XSTREET2,ESZ,COMMENTS,AD_TS")] JC_HC_CURENT jC_HC_CURENT)
+        public ActionResult Create([Bind(Include = "EID,TYCOD,SUB_TYCOD,UDTS,XDTS,ESTNUM,EDIRPRE,EFEANME,EFEATYP,UNIT_COUNT,LOI_SENT,HC_SENT,AG_ID,LOI_EVAL,UNIT_EVAL,TYPE_EVAL,NUM_1,XSTREET1,XSTREET2,ESZ,COMMENTS,AD_TS")] JC_HC_CURENT jc_hc_curent)
         {
             if (ModelState.IsValid)
             {
-                db.JC_HC_CURENT.Add(jC_HC_CURENT);
+                db.JC_HC_CURENT.Add(jc_hc_curent);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(jC_HC_CURENT);
+            return View(jc_hc_curent);
         }
 
         // GET: Calls/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int? eid)
         {
-            if (id == null)
+            if (eid == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JC_HC_CURENT jC_HC_CURENT = db.JC_HC_CURENT.Find(id);
-            if (jC_HC_CURENT == null)
+            JC_HC_CURENT jc_hc_curent = db.JC_HC_CURENT.Where(x => x.EID == eid).FirstOrDefault();
+            if (jc_hc_curent == null)
             {
                 return HttpNotFound();
             }
-            return View(jC_HC_CURENT);
+            return View(jc_hc_curent);
         }
 
         // POST: Calls/Edit/5
@@ -78,30 +78,30 @@ namespace Admin28.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EID,TYCOD,SUB_TYCOD,UDTS,XDTS,ESTNUM,EDIRPRE,EFEANME,EFEATYP,UNIT_COUNT,LOI_SENT,HC_SENT,AG_ID,LOI_EVAL,UNIT_EVAL,TYPE_EVAL,NUM_1,XSTREET1,XSTREET2,ESZ,COMMENTS,AD_TS")] JC_HC_CURENT jC_HC_CURENT)
+        public ActionResult Edit([Bind(Include = "EID,TYCOD,SUB_TYCOD,UDTS,XDTS,ESTNUM,EDIRPRE,EFEANME,EFEATYP,UNIT_COUNT,LOI_SENT,HC_SENT,AG_ID,LOI_EVAL,UNIT_EVAL,TYPE_EVAL,NUM_1,XSTREET1,XSTREET2,ESZ,COMMENTS,AD_TS")] JC_HC_CURENT jc_hc_curent)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(jC_HC_CURENT).State = EntityState.Modified;
+                db.Entry(jc_hc_curent).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(jC_HC_CURENT);
+            return View(jc_hc_curent);
         }
 
         // GET: Calls/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? eid)
         {
-            if (id == null)
+            if (eid == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JC_HC_CURENT jC_HC_CURENT = db.JC_HC_CURENT.Find(id);
-            if (jC_HC_CURENT == null)
+            JC_HC_CURENT jc_hc_curent = db.JC_HC_CURENT.Where(x => x.EID == eid).FirstOrDefault();
+            if (jc_hc_curent == null)
             {
                 return HttpNotFound();
             }
-            return View(jC_HC_CURENT);
+            return View(jc_hc_curent);
         }
 
         // POST: Calls/Delete/5
@@ -109,8 +109,8 @@ namespace Admin28.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            JC_HC_CURENT jC_HC_CURENT = db.JC_HC_CURENT.Find(id);
-            db.JC_HC_CURENT.Remove(jC_HC_CURENT);
+            JC_HC_CURENT jc_hc_curent = db.JC_HC_CURENT.Find(id);
+            db.JC_HC_CURENT.Remove(jc_hc_curent);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
