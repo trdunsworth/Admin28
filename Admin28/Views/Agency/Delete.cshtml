@@ -1,0 +1,40 @@
+﻿@model Admin28.Models.JC_HC_AGENCY
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DELETE @Html.DisplayFor(model => model.AG_ID)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AG_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AG_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNITS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNITS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

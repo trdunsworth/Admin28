@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Admin28.Models.JC_HC_AGENCY>
+
+@{
+    ViewBag.Title = "Agency Index";
+}
+
+<h2>Agnecy Listings</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-condensed table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AG_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UNITS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AG_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UNITS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "text-warning" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "text-danger" })
+        </td>
+    </tr>
+}
+
+</table>

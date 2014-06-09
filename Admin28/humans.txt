@@ -1,0 +1,16 @@
+﻿/* TEAM */
+Name: Tony Dunsworth
+Title: CAD Administrator
+Site: http://jcsoarch:8001
+Twitter: trdunsworth
+Location: Olathe, Kansas, USA
+
+/* THANKS */
+Name: http://www.jocosheriff.org/ Johson County Sheriff's Office
+Name: Carter Wetherington
+
+/* SITE */
+Last Update: 2014/05/05
+Standards: HTML5, CSS3, ECMAScript 5
+Components: ASP.NET MVC5, ODP.NET 4.121.1, jQuery, Modernizr, html5shiv, Bootstrap, .NET 4.5.1
+Software: Visual Studio 2013 

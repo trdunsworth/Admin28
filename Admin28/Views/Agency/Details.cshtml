@@ -1,0 +1,34 @@
+﻿@model Admin28.Models.JC_HC_AGENCY
+
+@{
+    ViewBag.Title = "Agency Details";
+}
+
+<h2>Agnecy Details</h2>
+
+<div>
+    <h4>AGENCY: @Html.DisplayFor(model => model.AG_ID)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AG_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AG_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNITS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNITS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
