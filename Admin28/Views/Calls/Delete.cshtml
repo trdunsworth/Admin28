@@ -1,10 +1,10 @@
 ﻿@model Admin28.Models.JC_HC_CURENT
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Delete Call";
 }
 
-<h2>Delete</h2>
+<h2>Delete Call &ndash; <span class="text-danger">DO NOT USE</span></h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -169,7 +169,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-danger disabled" disabled="disabled" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }
