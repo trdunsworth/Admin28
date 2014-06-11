@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Admin28.Models.JC_HC_LOI>
+
+@{
+    ViewBag.Title = "LOI Index";
+}
+
+<h2>LOI Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-condensed table-striped" id="paged">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMMON_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESZ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOI_GRP_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACTIVE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMMON_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADDRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESZ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOI_GRP_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACTIVE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "text-warning" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "text-danger" })
+        </td>
+    </tr>
+}
+
+</table>

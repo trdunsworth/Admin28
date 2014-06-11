@@ -1,0 +1,58 @@
+﻿@model Admin28.Models.JC_HC_USR_SND
+
+@{
+    ViewBag.Title = "Subscription Details";
+}
+
+<h2>Subscription Details</h2>
+
+<div>
+    <h4>SUBSCRIPTION @Html.DisplayFor(model => model.ID)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JC_HC_AGENCY.AG_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JC_HC_AGENCY.AG_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRP_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRP_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESZ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESZ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JC_HC_LOI.COMMON_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JC_HC_LOI.COMMON_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JC_HC_USERS.LNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JC_HC_USERS.LNAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

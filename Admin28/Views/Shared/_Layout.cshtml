@@ -57,7 +57,9 @@
     <script src="~/Scripts/respond.min.js"></script>
     <script src="~/Scripts/respond.matchmedia.addListener.min.js"></script>
     @RenderSection("scripts", required: false)
-    <script type="text/javascript" src="~/Scripts/oneSimpleTablePaging-1.0.js"></script>
-    <script type="text/javascript">$('#paged').oneSimpleTablePagination({ rowsPerPage: 15 });</script>
+    <script src="~/Scripts/oneSimpleTablePaging-1.0.js"></script>
+    <script>
+        $('#paged').oneSimpleTablePagination({ rowsPerPage: 15 });
+    </script>
 </body>
 </html>

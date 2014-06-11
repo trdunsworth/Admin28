@@ -1,0 +1,96 @@
+﻿@model Admin28.Models.JC_HC_USERS
+
+@{
+    ViewBag.Title = "User Details";
+}
+
+<h2>User Details</h2>
+
+<div>
+    <h4>USER: @Html.DisplayFor(model => model.LNAME), @Html.DisplayFor(model => model.FNAME)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AG_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AG_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OOF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OOF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LEO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LEO)
+        </dd>
+    </dl>
+
+    <h4>SUBSCRIPTIONS</h4>
+    @foreach (var item in Model.JC_HC_USR_SND)
+    {
+    <dl class="dl-horizontal">
+        @if (item.AGY_ID != null)
+        {
+        <dt>AGENCY:</dt>
+        <dd>@Html.DisplayFor(model => item.JC_HC_AGENCY.AG_ID)</dd>
+        }
+        @if (item.LOI_ID != null)
+        {
+        <dt>LOCATION:</dt>
+        <dd>@Html.DisplayFor(model => item.JC_HC_LOI.ADDRESS)</dd>
+        }
+        @if (item.GRP_ID != null)
+        {
+        <dt>LOCATION GROUP:</dt>
+        <dd>@Html.DisplayFor(model => item.GRP_ID)</dd>
+        }
+    </dl>
+    <br />
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,112 @@
+﻿@model Admin28.Models.JC_HC_LOI
+
+@{
+    ViewBag.Title = "Delete Location";
+}
+
+<h2>Delete Location</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LOCATION TO BE REMOVED: @Html.DisplayFor(model => model.ADDRESS)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HNDR_BLCK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HNDR_BLCK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOI_GRP_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOI_GRP_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EFEANME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EFEANME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTNUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTNUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDIRPRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDIRPRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EFEATYP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EFEATYP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMMON_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMMON_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACTIVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACTIVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESZ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESZ)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
