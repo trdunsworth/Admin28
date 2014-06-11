@@ -1,0 +1,73 @@
+﻿@model Admin28.Models.JC_HC_SENT
+
+@{
+    ViewBag.Title = "Sent Call Details";
+}
+
+<h2>Sent Call Details</h2>
+
+<div>
+    <h4>SENT CALL: @Html.DisplayFor(model => model.ID)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AG_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AG_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TYCOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TYCOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUB_TYCOD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUB_TYCOD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SENT_DT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SENT_DT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_SENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_SENT)
+        </dd>
+        
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Admin28.Models.JC_HC_TYPES>
+
+@{
+    ViewBag.Title = "Call Types Index";
+}
+
+<h2>Call Types Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-condensed table-striped" id="paged">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TYCOD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUB_TYCOD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AGENCY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIORITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UN_CNT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALWYS_SND)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TYCOD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUB_TYCOD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AGENCY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIORITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UN_CNT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALWYS_SND)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "text-warning" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "text-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,76 @@
+﻿@model Admin28.Models.JC_HC_CURENT
+
+@{
+    ViewBag.Title = "Call Details";
+}
+
+<h2>Call Details</h2>
+
+<div>
+    <h4>EVENT NO: @Html.DisplayFor(model => model.NUM_1)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.EID)</dt>
+        <dd>@Html.DisplayFor(model => model.EID)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.AG_ID)</dt>
+        <dd>@Html.DisplayFor(model => model.AG_ID)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.TYCOD)</dt>
+        <dd>@Html.DisplayFor(model => model.TYCOD)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.SUB_TYCOD)</dt>
+        <dd>@Html.DisplayFor(model => model.SUB_TYCOD)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.UNIT_COUNT)</dt>
+        <dd>@Html.DisplayFor(model => model.UNIT_COUNT)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.ESTNUM)</dt>
+        <dd>@Html.DisplayFor(model => model.ESTNUM)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.EDIRPRE)</dt>
+        <dd>@Html.DisplayFor(model => model.EDIRPRE)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.EFEANME)</dt>
+        <dd>@Html.DisplayFor(model => model.EFEANME)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.EFEATYP)</dt>
+        <dd>@Html.DisplayFor(model => model.EFEATYP)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.XSTREET1)</dt>
+        <dd>@Html.DisplayFor(model => model.XSTREET1)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.XSTREET2)</dt>
+        <dd>@Html.DisplayFor(model => model.XSTREET2)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.ESZ)</dt>
+        <dd>@Html.DisplayFor(model => model.ESZ)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.AD_TS)</dt>
+        <dd>@Html.DisplayFor(model => model.AD_TS)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.UDTS)</dt>
+        <dd>@Html.DisplayFor(model => model.UDTS)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.LOI_SENT)</dt>
+        <dd>@Html.DisplayFor(model => model.LOI_SENT)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.HC_SENT)</dt>
+        <dd>@Html.DisplayFor(model => model.HC_SENT)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.LOI_EVAL)</dt>
+        <dd>@Html.DisplayFor(model => model.LOI_EVAL)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.UNIT_EVAL)</dt>
+        <dd>@Html.DisplayFor(model => model.UNIT_EVAL)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.TYPE_EVAL)</dt>
+        <dd>@Html.DisplayFor(model => model.TYPE_EVAL)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.COMMENTS)</dt>
+        <dd>@Html.DisplayFor(model => model.COMMENTS)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

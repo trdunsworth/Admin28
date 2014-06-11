@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Admin28.Models.JC_HC_SENT>
+
+@{
+    ViewBag.Title = "Sent Calls Index";
+}
+
+<h2>Sent Calls Index</h2>
+
+<table class="table table-bordered table-condensed table-striped" id="paged">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ID)</th>
+        <th>@Html.DisplayNameFor(model => model.NUM_1)</th>
+        <th>@Html.DisplayNameFor(model => model.EID)</th>
+        <th>@Html.DisplayNameFor(model => model.AG_ID)</th>
+        <th>@Html.DisplayNameFor(model => model.TYCOD)</th>
+        <th>@Html.DisplayNameFor(model => model.SUB_TYCOD)</th>
+        <th>@Html.DisplayNameFor(model => model.SENT_DT)</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.ID)</td>
+        <td>@Html.DisplayFor(modelItem => item.NUM_1)</td>
+        <td>@Html.DisplayFor(modelItem => item.EID)</td>
+        <td>@Html.DisplayFor(modelItem => item.AG_ID)</td>
+        <td>@Html.DisplayFor(modelItem => item.TYCOD)</td>
+        <td>@Html.DisplayFor(modelItem => item.SUB_TYCOD)</td>
+        <td>@Html.DisplayFor(modelItem => item.SENT_DT)</td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
