@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="HCEntities-Web.config Connection String" description="HCEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.HCModel.csdl|res://*/Models.HCModel.ssdl|res://*/Models.HCModel.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=JCSOARCH;PASSWORD=cad911;USER ID=CAD911&quot;" tags="SqlConnectionString">
+  <parameter name="HCEntities-Web.config Connection String" description="HCEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.HCModel.csdl|res://*/Models.HCModel.ssdl|res://*/Models.HCModel.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=SHRVM2008ARC.INGR.OPKANSAS.ORG)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=JCSOARCH.INGR.OPKANSAS.ORG)));PASSWORD=cad911;USER ID=CAD911&quot;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="U:\\GitHub\\Admin28\\Admin28\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='HCEntities']/@connectionString" />
   </parameter>
 </parameters>
