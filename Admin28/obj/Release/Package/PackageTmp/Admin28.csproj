@@ -207,8 +207,8 @@
       <LastGenOutput>HCModel.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\JCSOARCH.pubxml" />
-    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\html5shiv.js" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />

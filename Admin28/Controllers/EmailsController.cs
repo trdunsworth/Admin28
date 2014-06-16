@@ -15,9 +15,17 @@ namespace Admin28.Controllers
         private HCEntities db = new HCEntities();
 
         // GET: Emails
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.JC_HC_SENT.OrderByDescending(JC_HC_SENT => JC_HC_SENT.ID).ToList());
+            var emails = from e in db.JC_HC_SENT
+                         select e;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                emails = emails.Where(s => s.NUM_1.Contains(searchString));
+            }
+
+            return View(emails.OrderByDescending(JC_HC_SENT => JC_HC_SENT.ID).ToList());
         }
 
         // GET: Emails/Details/5

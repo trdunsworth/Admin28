@@ -43,6 +43,7 @@
             </ul>
         </div>
     </nav>
+    <br />
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -50,16 +51,16 @@
             <p>&copy; @DateTime.Now.Year &ndash; Johnson County Sheriff&rsquo;s Office, All rights reserved. Email the <a href="mailto:tony.dunsworth@jocogov.org" class="text-info">site administrator</a> for corrections or questions.</p>
         </footer>
     </div>
-    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/respond.min.js"></script>
-    <script src="~/Scripts/respond.matchmedia.addListener.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/respond.js"></script>
+    <script type="text/javascript" src="~/Scripts/respond.matchmedia.addListener.js"></script>
     @RenderSection("scripts", required: false)
-    <script src="~/Scripts/oneSimpleTablePaging-1.0.js"></script>
-    <script>
-        $('#paged').oneSimpleTablePagination({ rowsPerPage: 15 });
+    <script type="text/javascript" src="~/Scripts/oneSimpleTablePaging-1.0.js"></script>
+    <script type="text/javascript">
+        $('#paged').oneSimpleTablePagination({rowsPerPage: 15});
     </script>
 </body>
 </html>

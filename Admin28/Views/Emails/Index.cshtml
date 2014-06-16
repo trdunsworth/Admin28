@@ -6,6 +6,14 @@
 
 <h2>Sent Calls Index</h2>
 
+<p>
+    @using (Html.BeginForm())
+    {
+        <p>Event No.: @Html.TextBox("SearchString") <br />
+        <input type="submit" class="btn btn-primary" value="Filter" /></p>
+    }
+</p>
+
 <table class="table table-bordered table-condensed table-striped" id="paged">
     <tr>
         <th>@Html.DisplayNameFor(model => model.ID)</th>

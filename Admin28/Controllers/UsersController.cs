@@ -15,9 +15,17 @@ namespace Admin28.Controllers
         private HCEntities db = new HCEntities();
 
         // GET: Users
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.JC_HC_USERS.OrderBy(JC_HC_USERS => JC_HC_USERS.ID).ToList());
+            var users = from u in db.JC_HC_USERS
+                        select u;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                users = users.Where(s => s.LNAME.Contains(searchString.ToUpper()));
+            }
+
+            return View(users.OrderBy(JC_HC_USERS => JC_HC_USERS.ID).ToList());
         }
 
         // GET: Users/Details/5

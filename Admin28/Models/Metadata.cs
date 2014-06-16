@@ -282,7 +282,7 @@ namespace Admin28.Models
         [Display(Name = "LAST NAME")]
         [StringLength(40)]
         public string LNAME { get; set; }
-
+        
         [Required]
         [Display(Name = "FIRST NAME")]
         [StringLength(20)]
