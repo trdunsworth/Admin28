@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int16" Nullable="false" />
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="AG_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="UNITS" Type="Int16" Nullable="false" />
     <NavigationProperty Name="JC_HC_USR_SND" Relationship="Self.SND_AGY_ID_FK" FromRole="JC_HC_AGENCY" ToRole="JC_HC_USR_SND" />
@@ -42,7 +42,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HNDR_BLCK" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <Property Name="LOI_GRP_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="ZIP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
@@ -68,13 +68,13 @@
     <Property Name="SENT_DT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="EMAIL_SENT" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
     <Property Name="NUM_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="JC_HC_TYPES">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TYCOD" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SUB_TYCOD" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
     <Property Name="AGENCY" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
@@ -88,7 +88,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="LNAME" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="AG_ID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
@@ -112,7 +112,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="USR_ID" Type="Int32" />
     <Property Name="ESZ" Type="Int32" />
     <Property Name="AGY_ID" Type="Int16" />

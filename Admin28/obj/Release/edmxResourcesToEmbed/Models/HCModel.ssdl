@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="number" Precision="2" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="number" Precision="2" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="AG_ID" Type="varchar2" MaxLength="6" Nullable="false" />
     <Property Name="UNITS" Type="number" Precision="2" Scale="0" Nullable="false" />
   </EntityType>
@@ -41,7 +41,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="number" Precision="6" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="number" Precision="6" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="HNDR_BLCK" Type="varchar2" MaxLength="8" />
     <Property Name="LOI_GRP_ID" Type="varchar2" MaxLength="10" />
     <Property Name="ZIP" Type="varchar2" MaxLength="15" />
@@ -66,13 +66,13 @@
     <Property Name="SENT_DT" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="EMAIL_SENT" Type="varchar2" MaxLength="4000" />
     <Property Name="NUM_1" Type="varchar2" MaxLength="20" />
-    <Property Name="ID" Type="number" Precision="8" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="number" Precision="8" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="JC_HC_TYPES">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="TYCOD" Type="varchar2" MaxLength="16" Nullable="false" />
     <Property Name="SUB_TYCOD" Type="varchar2" MaxLength="16" />
     <Property Name="AGENCY" Type="varchar2" MaxLength="9" Nullable="false" />
@@ -86,7 +86,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="number" Precision="6" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="number" Precision="6" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="LNAME" Type="varchar2" MaxLength="40" Nullable="false" />
     <Property Name="FNAME" Type="varchar2" MaxLength="20" Nullable="false" />
     <Property Name="AG_ID" Type="varchar2" MaxLength="6" />
@@ -109,7 +109,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="ID" Type="number" Precision="10" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="USR_ID" Type="number" Precision="10" Scale="0" />
     <Property Name="ESZ" Type="number" Precision="10" Scale="0" />
     <Property Name="AGY_ID" Type="number" Precision="2" Scale="0" />

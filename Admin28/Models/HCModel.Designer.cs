@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'u:\visual studio 2013\Projects\Admin28\Admin28\Models\HCModel.edmx'. 
+﻿// T4 code generation is enabled for model 'U:\GitHub\Admin28\Admin28\Models\HCModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
