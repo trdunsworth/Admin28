@@ -14,44 +14,6 @@ namespace Admin28.Controllers
     {
         private HCEntities db = new HCEntities();
 
-        public ActionResult SelectBoolean()
-        {
-            List<SelectListItem> booleans = new List<SelectListItem>();
-            booleans.Add(new SelectListItem { Text = "T", Value = "T" });
-            booleans.Add(new SelectListItem { Text = "F", Value = "F" });
-
-            ViewBag.BooleanType = booleans;
-
-            return View();
-        }
-
-        public ActionResult SelectAgency()
-        {
-            List<SelectListItem> agencies = new List<SelectListItem>();
-            agencies.Add(new SelectListItem { Text = "FWPD", Value = "FWPD" });
-            agencies.Add(new SelectListItem { Text = "GDPD", Value = "GDPD" });
-            agencies.Add(new SelectListItem { Text = "JCSO", Value = "JCSO", Selected = true });
-            agencies.Add(new SelectListItem { Text = "LQPD", Value = "LQPD" });
-            agencies.Add(new SelectListItem { Text = "LWPD", Value = "LWPD" });
-            agencies.Add(new SelectListItem { Text = "LXPD", Value = "LXPD" });
-            agencies.Add(new SelectListItem { Text = "MHPD", Value = "MHPD" });
-            agencies.Add(new SelectListItem { Text = "MRPD", Value = "MRPD" });
-            agencies.Add(new SelectListItem { Text = "MSPD", Value = "MSPD" });
-            agencies.Add(new SelectListItem { Text = "OPD", Value = "OPD" });
-            agencies.Add(new SelectListItem { Text = "OPPD", Value = "OPPD" });
-            agencies.Add(new SelectListItem { Text = "PKPD", Value = "PKPD" });
-            agencies.Add(new SelectListItem { Text = "PVPD", Value = "PVPD" });
-            agencies.Add(new SelectListItem { Text = "RPPD", Value = "RPPD" });
-            agencies.Add(new SelectListItem { Text = "SHPD", Value = "SHPD" });
-            agencies.Add(new SelectListItem { Text = "SHWPD", Value = "SHWPD" });
-            agencies.Add(new SelectListItem { Text = "WWPD", Value = "WWPD" });
-            agencies.Add(new SelectListItem { Text = "OTHER", Value = "OTHER" });
-
-            ViewBag.AgencyType = agencies;
-
-            return View();
-        }
-        
         // GET: Users
         public ActionResult Index(string searchString)
         {
@@ -84,6 +46,10 @@ namespace Admin28.Controllers
         // GET: Users/Create
         public ActionResult Create()
         {
+            // set my dropdown-based list to a ViewBag object
+            // ViewBag.agencyType = AgencyList();
+            // ViewBag.booleanType = BooleanList();
+
             return View();
         }
 
@@ -116,6 +82,11 @@ namespace Admin28.Controllers
             {
                 return HttpNotFound();
             }
+
+            // set my dropdown-based list to a ViewBag object
+            // ViewBag.agencyType = AgencyList();
+            // ViewBag.booleanType = BooleanList();
+
             return View(jc_hc_users);
         }
 

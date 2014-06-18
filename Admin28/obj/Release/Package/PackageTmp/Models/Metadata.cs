@@ -5,6 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Admin28.Models
 {
+    public enum BooleanType
+    {
+        T, F
+    }
+
+    public enum AgencyType
+    {
+        FWPD, GDPD, JCSO, LQPD, LWPD, LXPD, MHPD, MRPD, MSPD, OPD, OPPD, OTHER, PKPD, PVPD, RPPD, SHPD, SHWPD, WWPD
+    }
+
+
     public class JC_HC_AGENCYMetadata
     {
         [Required]
