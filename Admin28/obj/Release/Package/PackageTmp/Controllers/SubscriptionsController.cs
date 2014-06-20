@@ -45,9 +45,9 @@ namespace Admin28.Controllers
         // GET: Subscriptions/Create
         public ActionResult Create()
         {
-            ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID");
-            ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI, "ID", "HNDR_BLCK");
-            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS, "ID", "LNAME");
+            //ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID");
+            //ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI.OrderBy(x => x.ID), "ID", "ADDRESS");
+            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS.OrderBy(x => x.ID), "ID", "LNAME");
             return View();
         }
 
@@ -65,9 +65,9 @@ namespace Admin28.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID", jc_hc_usr_snd.AGY_ID);
-            ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI, "ID", "HNDR_BLCK", jc_hc_usr_snd.LOI_ID);
-            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS, "ID", "LNAME", jc_hc_usr_snd.USR_ID);
+            //ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID", jc_hc_usr_snd.AGY_ID);
+            //ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI.OrderBy(x => x.ID), "ID", "ADDRESS", jc_hc_usr_snd.LOI_ID);
+            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS.OrderBy(x => x.ID), "ID", "LNAME", jc_hc_usr_snd.USR_ID);
             return View(jc_hc_usr_snd);
         }
 
@@ -83,9 +83,9 @@ namespace Admin28.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID", jc_hc_usr_snd.AGY_ID);
-            ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI, "ID", "HNDR_BLCK", jc_hc_usr_snd.LOI_ID);
-            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS, "ID", "LNAME", jc_hc_usr_snd.USR_ID);
+            //ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID", jc_hc_usr_snd.AGY_ID);
+            //ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI.OrderBy(x => x.ID), "ID", "ADDRESS", jc_hc_usr_snd.LOI_ID);
+            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS.OrderBy(x => x.ID), "ID", "LNAME", jc_hc_usr_snd.USR_ID);
             return View(jc_hc_usr_snd);
         }
 
@@ -102,9 +102,9 @@ namespace Admin28.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID", jc_hc_usr_snd.AGY_ID);
-            ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI, "ID", "HNDR_BLCK", jc_hc_usr_snd.LOI_ID);
-            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS, "ID", "LNAME", jc_hc_usr_snd.USR_ID);
+            //ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID", jc_hc_usr_snd.AGY_ID);
+            //ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI.OrderBy(x => x.ID), "ID", "ADDRESS", jc_hc_usr_snd.LOI_ID);
+            ViewBag.USR_ID = new SelectList(db.JC_HC_USERS.OrderBy(x => x.ID), "ID", "LNAME", jc_hc_usr_snd.USR_ID);
             return View(jc_hc_usr_snd);
         }
 

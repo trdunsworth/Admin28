@@ -363,7 +363,6 @@ namespace Admin28.Models
 
         [Display(Name = "USER ID")]
         [DisplayFormat(DataFormatString = "{0:#}", NullDisplayText = "0")]
-        [ForeignKey("JC_HC_USERS")]
         public Nullable<int> USR_ID { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:#}", NullDisplayText = "0")]
@@ -371,7 +370,6 @@ namespace Admin28.Models
 
         [Display(Name = "AGENCY ID")]
         [DisplayFormat(DataFormatString = "{0:#}", NullDisplayText = "0")]
-        [ForeignKey("JC_HC_AGENCY")]
         public Nullable<int> AGY_ID { get; set; }
 
         [Display(Name = "LOCATION GROUP ID")]
@@ -380,7 +378,6 @@ namespace Admin28.Models
 
         [Display(Name = "LOCATION ID")]
         [DisplayFormat(DataFormatString = "{0:#}", NullDisplayText = "0")]
-        [ForeignKey("JC_HC_LOI")]
         public Nullable<int> LOI_ID { get; set; }
     }
 }
