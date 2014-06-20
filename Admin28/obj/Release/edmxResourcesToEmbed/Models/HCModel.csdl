@@ -118,7 +118,7 @@
     <Property Name="AGY_ID" Type="Int16" />
     <Property Name="GRP_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="LOI_ID" Type="Int32" />
-    <NavigationProperty Name="JC_HC_AGENCY" Relationship="Self.SND_AGY_ID_FK" FromRole="JC_HC_USR_SND" ToRole="JC_HC_AGENCY" />
+    <NavigationProperty Name="JC_HC_AGENCY" Relationship="AdminModel.SND_AGY_ID_FK" FromRole="JC_HC_USR_SND" ToRole="JC_HC_AGENCY" />
     <NavigationProperty Name="JC_HC_LOI" Relationship="Self.SND_LOI_ID_FK" FromRole="JC_HC_USR_SND" ToRole="JC_HC_LOI" />
     <NavigationProperty Name="JC_HC_USERS" Relationship="Self.SND_USR_ID_FK" FromRole="JC_HC_USR_SND" ToRole="JC_HC_USERS" />
   </EntityType>

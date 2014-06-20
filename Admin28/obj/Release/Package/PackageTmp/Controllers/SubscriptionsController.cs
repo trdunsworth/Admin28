@@ -15,10 +15,16 @@ namespace Admin28.Controllers
         private HCEntities db = new HCEntities();
 
         // GET: Subscriptions
-        public ActionResult Index()
+        public ActionResult Index(int? searchString)
         {
+            var users = from u in db.JC_HC_USR_SND
+                            select u;
+            if (searchString != null)
+            {
+                users = users.Where(s => s.USR_ID == searchString);
+            }
             var jc_hc_usr_snd = db.JC_HC_USR_SND.Include(j => j.JC_HC_AGENCY).Include(j => j.JC_HC_LOI).Include(j => j.JC_HC_USERS);
-            return View(jc_hc_usr_snd.OrderBy(JC_HC_USR_SND => JC_HC_USR_SND.ID).ToList());
+            return View(users.OrderBy(JC_HC_USR_SND => JC_HC_USR_SND.ID).ToList());
         }
 
         // GET: Subscriptions/Details/5
