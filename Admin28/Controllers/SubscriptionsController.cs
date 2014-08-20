@@ -45,7 +45,7 @@ namespace Admin28.Controllers
         // GET: Subscriptions/Create
         public ActionResult Create()
         {
-            //ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID");
+            ViewBag.AGY_ID = new SelectList(db.JC_HC_AGENCY, "ID", "AG_ID");
             //ViewBag.LOI_ID = new SelectList(db.JC_HC_LOI.OrderBy(x => x.ID), "ID", "ADDRESS");
             ViewBag.USR_ID = new SelectList(db.JC_HC_USERS.OrderBy(x => x.ID), "ID", "LNAME");
             return View();
